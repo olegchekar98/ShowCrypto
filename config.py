@@ -12,10 +12,13 @@ class CryptoCurrency:
          # x is a number in json massive from API
         self.x = x
 
+
     def printing(self):
         print(self.json_ported[self.x]['name'])
         print(self.json_ported[self.x]['price_usd'])
 
-    def crypto_value(self):
-        naming = self.json_ported[self.x]['name']
-        pricing = self.json_ported[self.x]['price_usd']
+    def naming(self):
+        return self.json_ported[self.x]['name']
+
+    def pricing(self):
+        return self.json_ported[self.x]['price_usd']
