@@ -27,21 +27,21 @@ add_crypto = ("INSERT INTO crypto_table "
               "(name, price) "
               "VALUES (%(name)s, %(price)s)")
 
-nam = [
+name = [
     crypto_dict['bitcoin'].naming,
     crypto_dict['ethereum'].naming,
     crypto_dict['ripple'].naming,
 ]
 
-pric = [
+price = [
     crypto_dict['bitcoin'].pricing,
     crypto_dict['ethereum'].pricing,
     crypto_dict['ripple'].pricing,
 ]
 
 data_crypto = {
-  'name': nam,
-  'price': pric,
+  'name': name,
+  'price': price,
 }
 
 cursor.execute(add_crypto, data_crypto)
