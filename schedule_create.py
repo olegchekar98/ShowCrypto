@@ -1,9 +1,6 @@
 import matplotlib.pyplot as plt
-import mysql.connector
-from settings import schedule_val
+from settings import schedule_val, cnx, cursor
 
-cnx = mysql.connector.connect(user='root', password='password', host='127.0.0.1', database='my_connection')
-cursor = cnx.cursor()
 
 class PaintSchedule():
     def __init__(self, name_numb):
