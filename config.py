@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 
 import json
-import urllib.request
+from settings import data
 
 
 class CryptoCurrency:
     def __init__(self, x):
-        url = urllib.request.urlopen("https://api.coinmarketcap.com/v1/ticker/?limit=10")
-        self.json_ported =  json.load(url)
+        self.json_ported =  json.load(data)
          # x is a number in json massive from API
         self.x = x
         self.naming = self.json_ported[self.x]['name']
