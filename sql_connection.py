@@ -17,10 +17,11 @@ except mysql.connector.Error as err:
 TABLES = {}
 TABLES['crypto_table'] = (
     "CREATE TABLE `crypto_table` ("
+    "  `id` INT NOT NULL AUTO_INCREMENT,"
     "  `name` varchar(20) NOT NULL,"
     "  `price` double(50) NOT NULL,"
     "  `date` DATE NOT NULL,"   
-    "  PRIMARY KEY (`name`)")
+    "  PRIMARY KEY (`id`)")
 
 add_crypto = ("INSERT INTO crypto_table "
               "(name, price, date) "
